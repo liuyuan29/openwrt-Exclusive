@@ -15,7 +15,7 @@ sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-SE'/g" ./package/base-files/files
 # curl -fsSL  https://raw.githubusercontent.com/siropboy/other/master/patch/poweroff/system.lua > ./feeds/luci/modules/luci-mod-admin-full/luasrc/controller/admin/system.lua
 # curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/logo.jpg > .package/luci-app-serverchan/root/usr/bin/serverchan/api/logo.jpg
 # Modify default IP
-# sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.123.253/g' package/base-files/files/bin/config_generate
 rm -rf ./package/lean/luci-app-qbittorrent
 rm -rf ./package/lean/luci-theme-argon
 rm -rf ./package/lean/luci-app-serverchan
